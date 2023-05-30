@@ -1,0 +1,16 @@
+.header{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem ;
+    background: black; 
+}
+
+.divHead{
+ 
+  height: 0.1rem;
+  background: var(--red-700);
+}

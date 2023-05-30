@@ -1,0 +1,1 @@
+import styles from './Movies.module.css'
