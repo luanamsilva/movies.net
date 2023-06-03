@@ -4,7 +4,8 @@ import {Link} from "react-router-dom";
 import styles from './Home.module.css'
 
 function Home() {
-  const [movies, setMovies] = useState<MoviesProps[]>([])
+  const [movies, setMovies] = useState([])
+  const [loadingMovies, setLoadingMovies] = useState(true)
 
   useEffect(()=>{
     async function loadMovies() {
@@ -15,16 +16,26 @@ function Home() {
      page: 1,
      }
    })
-   setMovies(response.data.results)
+   setMovies(response.data.results.slice(0,10))
+   setLoadingMovies(false)
   }
     loadMovies();
   },[])
+
+  if(loadingMovies){
+    return(
+    <div className={styles.loadingMovies}>
+      Carregando filmes...
+    </div>
+    )
+  }
   return (
     <> 
       
  
       {movies.map((movie) => {
             return (
+            
               <article className={styles.container} key={movie.id}>
                 <strong className={styles.title}>{movie.title}</strong>
                 <img className={styles.img}
@@ -33,7 +44,7 @@ function Home() {
                 />
                 <Link to={`/movie/${movie.id}`} className={styles.link}>Acessar</Link>
               </article>
-            );
+           );
           })} 
     </>
   )

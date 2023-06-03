@@ -1,0 +1,19 @@
+.notFoud{
+  margin: 2rem;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.link{
+
+  text-decoration: none;
+  color: var(--blue-400);
+  margin-top: 3rem;
+
+}
+
+.link:hover{
+  opacity: 0.4;
+}

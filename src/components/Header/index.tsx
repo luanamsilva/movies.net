@@ -10,7 +10,7 @@ export const Header = () => {
       <Link className={styles.logo} to="/"> <img src={logo} alt="logo"/></Link>
      
       </div>
-      <div className={styles.divHead}> <Link className={styles.favorite} to="/favoritos"> Meus filmes</Link>
+      <div className={styles.divHead}> <Link className={styles.favorite} to="/favoritos"> Meus filmes salvos</Link>
       </div>
   </>)
 }

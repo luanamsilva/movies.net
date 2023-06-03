@@ -4,12 +4,20 @@
   flex-direction: column;
 }
 
+.list{
+  display: grid;
+  
+  
+}
 .img{
   width: 100%;
   max-width: 13rem;
-  display: flex;
+  display: block;
   flex-direction: column;
   margin: 0 auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
 }
 
 .title{
@@ -18,7 +26,7 @@
   margin-bottom: 1rem;
   align-items: center;
   justify-content: center;
-}
+ }
 .link{
   margin: 0 auto;
   background: var(--blue-400);
@@ -27,7 +35,13 @@
   text-align: center;
   width: 100%;
   max-width: 13rem; 
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 .link:hover{
   opacity: 0.7;
+}
+.loadingMovies{
+  display: flex;
+  margin: 1rem;
 }
