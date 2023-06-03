@@ -8,6 +8,9 @@
   --gray-800: #202024;
   --gray-900: #121214;
 
+  --gold-200: #D4AB2E;
+  --gold-400: #7D6417;
+  
   --brown-200: #815740;
   --brown-400: #925537;
   --brown-600:  #60412F;
@@ -27,8 +30,8 @@
 
 
 body{
-  background: var(--gray-900); 
-  color: var(--white);
+ 
+
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1rem;
