@@ -39,7 +39,7 @@ let moviesSaved = JSON.parse(myFavoriteMovie) || []
 const checkedMovie = moviesSaved.some((movieSaved)=> movieSaved.id === movie.id)
 
 if(checkedMovie){
-  alert("Já existe")
+  alert("Você já adicionou esse filme!")
   return
 }moviesSaved.push(movie)
 localStorage.setItem("@moviesNet", JSON.stringify(moviesSaved))

@@ -17,12 +17,12 @@ setMovies(movieToRemove)
 
   return (
     <div>
-   <h1>Meus filmes salvos</h1>
+   <h1 className={styles.text}>Meus filmes salvos</h1>
    <ul>
     {movies.map((movie)=>(
       <li key={movie.key}>
-        <span>{movie.title}</span>
-        <Link to={`/movie/${movie.id}`}>ver detalhes</Link>
+       
+       <Link to={`/movie/${movie.id}`} className={styles.link}> {movie.title}</Link>
         <button onClick={()=>handleRemoveMovie(movie.id) }>Excluir</button>
         </li>
     ))}
