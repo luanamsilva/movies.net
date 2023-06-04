@@ -11,7 +11,7 @@ export const Header = () => {
       <Link className={styles.logo} to="/"> <img src={logo} alt="logo"/></Link>
      
      
-      <Link className={styles.favorite} to="/favoritos"><AiFillStar/> Filmes salvos</Link>
+      <Link className={styles.favorite} to="/favorite"><AiFillStar/> Filmes salvos</Link>
       </div>
   </>)
 }
