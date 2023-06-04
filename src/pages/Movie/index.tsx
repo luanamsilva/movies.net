@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
 import api from '../../services/api'
 import styles from './Movie.module.css'
+import {AiFillStar} from 'react-icons/ai'
 
 function Movie() {
   const {id} = useParams();
@@ -31,6 +32,19 @@ function Movie() {
 
 }, []);
 
+function handleSavedFavorite(){
+const myFavoriteMovie = localStorage.getItem("@moviesNet")
+let moviesSaved = JSON.parse(myFavoriteMovie) || []
+
+const checkedMovie = moviesSaved.some((movieSaved)=> movieSaved.id === movie.id)
+
+if(checkedMovie){
+  alert("Já existe")
+  return
+}moviesSaved.push(movie)
+localStorage.setItem("@moviesNet", JSON.stringify(moviesSaved))
+} 
+
 if(loading){
 return(
   <div>
@@ -46,7 +60,8 @@ return(
      <h3>Sinopse</h3>
      <span>{movie.overview}</span>
      <strong>Nota: {movie.vote_average.toFixed(2)}</strong>
-    </div>
+     <button onClick={handleSavedFavorite} className={styles.favorite}><AiFillStar/>Adiconar aos favoritos</button></div>
+     
   )
 }
 export default Movie
