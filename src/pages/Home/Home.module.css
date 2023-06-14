@@ -5,6 +5,8 @@
   padding: 0 50px;
   margin-top: 20px;
   gap: 1rem;
+  position: relative;
+  
 }
 
 
@@ -14,6 +16,7 @@
   display: block;
   flex-direction: column;
   margin: 0 auto;
+  margin-top: 0.375rem;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 
@@ -22,10 +25,11 @@
 .container strong{
 
   display: flex;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: -2rem;
   align-items: center;
   justify-content: center;
+  position: absolute;
+ 
  }
 
 .link{
@@ -39,7 +43,7 @@ justify-content: center;
 margin: 0 auto;
 border-bottom-left-radius: 8px;
 border-bottom-right-radius: 8px;
-
+margin-bottom: 1rem;
 }
 .link:hover{
   opacity: 0.7;
@@ -48,3 +52,4 @@ border-bottom-right-radius: 8px;
   display: flex;
   margin: 1rem;
 }
+

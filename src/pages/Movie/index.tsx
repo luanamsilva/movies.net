@@ -55,11 +55,11 @@ return(
 
   return (
     <div className={styles.details}>
-    <h1>{movie.title}</h1>
+    <strong>{movie.title}</strong>
      <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}  alt={movie.title} />
      <h3>Sinopse</h3>
      <span>{movie.overview}</span>
-     <strong>Nota: {movie.vote_average.toFixed(2)}</strong>
+     <h2>Nota: {movie.vote_average.toFixed(2)}</h2>
      <button onClick={handleSavedFavorite} className={styles.favorite}><AiFillStar/>Adiconar aos favoritos</button></div>
      
   )
