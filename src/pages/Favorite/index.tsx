@@ -1,16 +1,17 @@
 import styles from './Favorite.module.css'
 import {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
+import {MovieTypes} from '../../types/MovieTypes'
 
 function Favorite(){
-const [movies, setMovies] = useState([])
+const [movies, setMovies] = useState<MovieTypes[]>([])
 
 useEffect(()=>{
-  const myMovies = localStorage.getItem("@moviesNet");
-  setMovies(JSON.parse(myMovies) || [])
+  const myMovies:string | null = localStorage.getItem("@moviesNet");
+  setMovies(JSON.parse(myMovies ?? '') || [])
 },[])
 
-function handleRemoveMovie(id) {
+function handleRemoveMovie(id:number) {
   const movieToRemove = movies.filter((movie)=> movie.id !== id)
 setMovies(movieToRemove)  
 }
