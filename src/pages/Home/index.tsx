@@ -14,7 +14,7 @@ function Home() {
     async function loadMovies() {
       const response = await api.get('movie/now_playing', {
         params: {
-          api_key: "52139d7800b359f24813bae453e23e2a",
+          api_key: import.meta.env.VITE_API_KEY,
           language: 'pt-BR',
         },
       });
